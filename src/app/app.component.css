@@ -1,0 +1,49 @@
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+
+p {
+  font-family: Lato;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+h4 {
+  background: rgba(255,255,255,1);
+  background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(189,189,189,1) 51%, rgba(255,255,255,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(51%, rgba(189,189,189,1)), color-stop(100%, rgba(255,255,255,1)));
+  background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(189,189,189,1) 51%, rgba(255,255,255,1) 100%);
+  background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(189,189,189,1) 51%, rgba(255,255,255,1) 100%);
+  background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(189,189,189,1) 51%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(189,189,189,1) 51%, rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+  text-align: center;
+  padding: 10px 0;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 350px;
+}
+
+.odd {
+  background: #ccc;
+  padding: 10px;
+}
+
+.even {
+  background: #eee;
+  padding: 10px;
+}
+
+label {
+  text-align: center;
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  
+}
+

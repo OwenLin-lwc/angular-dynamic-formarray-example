@@ -1,0 +1,37 @@
+<div class="row available-form p-0 m-0">
+	<div class="col-12">
+		<h4>Avaliable</h4>
+		<form [formGroup]="availableForm" class="d-flex">
+			<div class="col-6 px-5 m-0" *ngFor="let x of availableName; let ix = index">
+				<label for="" class="col-form-label">{{x}}</label>
+        <div [formArrayName]="x" class="checkbox">
+          <ul *ngFor="let y of availableOption[x]; let iy = index; let isOdd=odd; let isEven=even" (change)="setSelected()" [class.odd]="isOdd" [class.even]="isEven" >
+            <li><input type="checkbox" [formControlName]="iy">{{y.Name}}</li>
+          </ul>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row p-0 m-0">
+  <div class="col-12">
+    <h4>Selected</h4>
+    <form [formGroup]="selectedForm" class="d-flex">
+      <div class="col-6 px-5 m-0" *ngFor="let x of availableName; let ix = index">
+        <label for="" class="col-form-label">{{x}}</label>
+        <div [formArrayName]="x" class="checkbox">          
+          <ul *ngFor="let y of availableOption[x]; let iy = index; let isOdd=odd; let isEven=even" (change)="setSelected()" [class.odd]="isOdd" [class.even]="isEven" >
+            <li><input type="checkbox" [formControlName]="iy">{{y.Name}}</li>
+          </ul>
+        </div>
+      </div>
+    </form>
+    <br>
+    <h4>Result</h4>
+    <div class ="px-5">
+    <ul *ngFor="let s of selected | keyvalue; let isOdd=odd; let isEven=even" [class.odd]="isOdd" [class.even]="isEven" >
+      <li>{{ s.value }}</li>
+    </ul>
+    </div>
+  </div>
+</div>
